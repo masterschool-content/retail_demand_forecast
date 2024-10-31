@@ -1,6 +1,6 @@
 # app/config.py
 
-DATA_PATH = "./data/"
+DATA_PATH = "../data/"
 MODEL_URI = "models:/YourModelName/Production"
 your_file_id_for_stores_csv = '1YgE0K5mrlsHg8QmWnozuAsX9YPk4EYgf'
 your_file_id_for_items_csv = '1gsts50e_UfBPonkAg67VtLE44zG85It4'
