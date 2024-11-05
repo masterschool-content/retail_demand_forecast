@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import gdown
 from app.config import DATA_PATH, GOOGLE_DRIVE_LINKS
+from sklearn.preprocessing import LabelEncoder
 
 def download_file(file_path, url):
     """Downloads a file from Google Drive if it doesn't exist locally."""
@@ -104,9 +105,13 @@ def preprocess_input_data(store_id, item_id, split_date, df_stores, df_items, df
 
     # Merge df_filtered with df_store and df_item on store_nbr and item_nbr, respectively
     df_filled = df_filled.merge(df_stores, on='store_nbr', how='left').merge(df_items, on='item_nbr', how='left')
-    categorical_columns = ['city', 'state', 'type', 'family', 'class']
-    for col in categorical_columns:
-        df_filled[col] = df_filled[col].astype('category')
+    #categorical_columns = ['city', 'state', 'type', 'family', 'class']
+    #for col in categorical_columns:
+    #    df_filled[col] = df_filled[col].astype('category')
+    ## Encode categorical columns with LabelEncoder
+    for col in ['city', 'state', 'type', 'family', 'class']:
+        le = LabelEncoder()
+        df_filled[col] = le.fit_transform(df_filled[col])
     df_filled = df_filled.sort_values(by=['store_nbr', 'item_nbr', 'date'])
 
     return df_filled

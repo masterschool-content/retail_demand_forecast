@@ -12,8 +12,10 @@ def main():
     model = load_model(MODEL_PATH)
 
     # UI components for inputs
-    store_id = st.selectbox("Store", df_stores['store_nbr'].unique())
-    item_id = st.selectbox("Item", df_items['item_nbr'].unique())
+    #store_id = st.selectbox("Store", df_stores['store_nbr'].unique())
+    #item_id = st.selectbox("Item", df_items['item_nbr'].unique())
+    store_id = st.selectbox("Store", [1]) #for testing limit to one store
+    item_id = st.selectbox("Item", [564533,838216,582865,364606]) #for testing limit to a few items
 
     default_date = datetime.date(2014, 3, 1)  # Default to March 1, 2014
     min_date = datetime.date(2013, 1, 1)

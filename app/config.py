@@ -19,7 +19,7 @@ GOOGLE_DRIVE_LINKS = {
 }
 
 MODEL_PATH = 'model/'
-your_file_id_for_xgboost_model_pkl = "12qKZdR2yi1Qqw8QEFvea7s1JWngWV2L-"  # Replace with the actual file ID
+your_file_id_for_xgboost_model_pkl = "10s41mHM-6CopwrAAGYRWSuXinjz0FE4-"  # Replace with the actual file ID for model.xgb from MLFlow aritifacts
 GOOGLE_DRIVE_LINKS_MODELS = {
     "xgboost_model": f"https://drive.google.com/uc?id={your_file_id_for_xgboost_model_pkl}"
 }
