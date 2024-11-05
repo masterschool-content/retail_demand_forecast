@@ -1,7 +1,6 @@
 # app/config.py
 
-DATA_PATH = "../data/"
-MODEL_URI = "models:/YourModelName/Production"
+DATA_PATH = "data/"
 your_file_id_for_stores_csv = '1YgE0K5mrlsHg8QmWnozuAsX9YPk4EYgf'
 your_file_id_for_items_csv = '1gsts50e_UfBPonkAg67VtLE44zG85It4'
 your_file_id_for_transactions_csv = '1-4RSVKRYYlnIY4Cd-G_ZYbkJqt-rPXVx'
@@ -17,4 +16,10 @@ GOOGLE_DRIVE_LINKS = {
     "oil": f"https://drive.google.com/uc?id={your_file_id_for_oil_csv}",
     "holidays_events": f"https://drive.google.com/uc?id={your_file_id_for_holidays_csv}",
     "train": f"https://drive.google.com/uc?id={your_file_id_for_train_csv}"
+}
+
+MODEL_PATH = 'model/'
+your_file_id_for_xgboost_model_pkl = "12qKZdR2yi1Qqw8QEFvea7s1JWngWV2L-"  # Replace with the actual file ID
+GOOGLE_DRIVE_LINKS_MODELS = {
+    "xgboost_model": f"https://drive.google.com/uc?id={your_file_id_for_xgboost_model_pkl}"
 }
